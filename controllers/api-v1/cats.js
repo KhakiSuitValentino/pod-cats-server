@@ -67,8 +67,9 @@ router.post('/new', async (req,res)=> {
 
 
 
-        // await foundUser.cats.push(req.id)
-
+        await foundUser.cats.push(req.body.id)
+        console.log('foundUser.cats:', foundUser.cats);
+        await foundUser.save()
     
 
 
